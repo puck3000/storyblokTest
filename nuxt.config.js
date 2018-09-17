@@ -68,5 +68,13 @@ module.exports = {
         });
       }
     }
-  }
+  },
+  modules: [
+    ['storyblok-nuxt', {accessToken: 'hkfmsXBsZZcwty7Vk4C5kQtt', cacheProvider: 'memory'}]
+  ],
+  
+  plugins: [
+    '~/plugins/components'
+  ]
 };
+
