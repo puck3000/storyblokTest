@@ -1,13 +1,6 @@
 <template>
   <section class="util__container">
-    <div :key="arbeit.content._uid" v-for="arbeit in data.stories" >
-      <h2>
-        <nuxt-link :to="'/' + arbeit.full_slug">
-          {{ arbeit.content.titel }}
-        </nuxt-link>
-      </h2>
-
-    </div>
+    <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component>
   </section>
 </template>
 
@@ -16,24 +9,24 @@ import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 
 export default {
   data () {
-    return { total: 0, data: { stories: [] } }
+    return { story: { content: {} } }
   },
+  mixins: [storyblokLivePreview],
   asyncData (context) {
+    // Check if we are in the editor mode
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
 
-    return context.app.$storyapi.get('cdn/stories', {
-      version: version,
-      starts_with: `/arbeiten`,
-      cv: context.store.state.cacheVersion
+    // Load the JSON from the API
+    return context.app.$storyapi.get('cdn/stories/agentur', {
+      version: version
     }).then((res) => {
-      return res
+      return res.data
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
   }
 }
 </script>
-
-<style>
+<style lang="stylus" scoped>
 
 </style>

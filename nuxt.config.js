@@ -81,6 +81,9 @@ module.exports = {
   
   plugins: [
     '~/plugins/components'
-  ]
+  ],
+  router: {
+    middleware: 'cache'
+  },
 };
 

@@ -9,9 +9,6 @@
 <script>
 export default {
   props: ['blok'],
-  
-  
-  
 }
 </script>
 <style lang="stylus" scoped>
