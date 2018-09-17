@@ -1,7 +1,5 @@
 <template>
-  <div v-editable="blok">
-    {{ blok.agenturtext }}
-  </div>
+  <div v-editable="blok" v-html="$md.render(blok.agenturtext)"></div>
 </template>
 
 <script>

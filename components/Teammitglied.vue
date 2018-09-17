@@ -1,15 +1,17 @@
 <template>
 <figure>     
     <img :src="blok.portrait" :alt="blok.alttext">
-    <figcaption>
-    {{blok.about}}
+    <figcaption v-html="$md.render(blok.about)">
     </figcaption>
 </figure>
 </template>
 
 <script>
 export default {
-  props: ['blok']
+  props: ['blok'],
+  
+  
+  
 }
 </script>
 <style lang="stylus" scoped>

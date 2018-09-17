@@ -70,8 +70,14 @@ module.exports = {
     }
   },
   modules: [
-    ['storyblok-nuxt', {accessToken: 'hkfmsXBsZZcwty7Vk4C5kQtt', cacheProvider: 'memory'}]
+    ['storyblok-nuxt', {accessToken: 'hkfmsXBsZZcwty7Vk4C5kQtt', cacheProvider: 'memory'}], 
+    ['@nuxtjs/markdownit']
   ],
+  markdownit: {
+    injected: true,
+    breaks: true,
+    html: true
+  },
   
   plugins: [
     '~/plugins/components'

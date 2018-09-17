@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.1",
     "nuxt": "^1.0.0",
     "storyblok-nuxt": "^0.0.9",
     "stylus": "^0.54.5",
