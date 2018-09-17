@@ -23,7 +23,7 @@ export default {
 
     return context.app.$storyapi.get('cdn/stories', {
       version: version,
-      starts_with: `/arbeiten`,
+      starts_with: `arbeiten/`, // needs trailing / - will have a look if we can get rid of that as well.
       cv: context.store.state.cacheVersion
     }).then((res) => {
       return res

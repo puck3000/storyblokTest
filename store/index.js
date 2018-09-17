@@ -4,16 +4,10 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       cacheVersion: '',
-      settings: {
-        main_navi: []
-      }
     },
     mutations: {
       setSettings (state, settings) {
         state.settings = settings
-      },
-      setLanguage (state, language) {
-        state.language = language
       },
       setCacheVersion (state, version) {
         state.cacheVersion = version
