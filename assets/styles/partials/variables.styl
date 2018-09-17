@@ -1,0 +1,40 @@
+@import 'mixins.styl'
+
+// COLORS
+$bgc = transparent
+$main = black
+$secondary = grey 
+
+
+// FONTS
+body 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+    line-height: 1.2
+.space 
+    letter-spacing: 1px
+.lead 
+    +lap()
+        font-size: 2em
+
+// UTIL CLASSSES
+
+.lapcenter
+    +lap()
+        text-align: center
+.mobcenter
+    +mobile() 
+        text-align: center
+.center 
+    text-align: center
+.tbmarg
+    margin: 4em inherit
+.tbhalfmarg
+    margin 2em inherit
+.bmarg4
+    margin-bottom 4em
+.bmarg2
+    margin-bottom 2em
+.bmarg1
+    margin-bottom 1em
+.uppercase 
+    text-transform: uppercase
