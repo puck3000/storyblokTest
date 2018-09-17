@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" v-html="$md.render(blok.agenturtext)"></div>
+  <p class="lapcenter lead bmarg2" v-editable="blok" v-html="$md.render(blok.agenturtext)"></p>
 </template>
 
 <script>

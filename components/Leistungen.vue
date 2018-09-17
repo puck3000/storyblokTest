@@ -1,6 +1,6 @@
 <template>
-<div>
-    <p v-html="$md.render(blok.leistungentext)"></p>
+<div class="leistung">
+    <p class="lapcenter lead bmarg2" v-html="$md.render(blok.leistungentext)"></p>
     <ul v-html="$md.render(blok.liste)"></ul>
 </div>
     
@@ -14,6 +14,11 @@ props: [
 }
 </script>
 
-<style>
+<style scoped>
+
+.leistng ul, .leistung p {
+    margin-bottom: 1em;
+}
+
 
 </style>

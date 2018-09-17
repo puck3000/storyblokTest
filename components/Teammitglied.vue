@@ -1,7 +1,7 @@
 <template>
 <figure>     
     <img :src="blok.portrait" :alt="blok.alttext">
-    <figcaption v-html="$md.render(blok.about)">
+    <figcaption class="figcaption" v-html="$md.render(blok.about)">
     </figcaption>
 </figure>
 </template>
@@ -11,7 +11,7 @@ export default {
   props: ['blok'],
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus" >
 #agentur
     #weareGrid 
         display: grid 
