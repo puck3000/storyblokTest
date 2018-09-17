@@ -11,7 +11,7 @@
         </nuxt-link>
       </li>
     </ul>
-    <nuxt-link tag="a" :to="'~/arbeiten/liste'">
+    <nuxt-link tag="a" :to="'/arbeiten/liste'">
       <h4>Alle Arbeiten</h4>
     </nuxt-link>
   </section>
