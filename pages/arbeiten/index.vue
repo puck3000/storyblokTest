@@ -18,45 +18,53 @@
 </template>
 
 <script>
-import storyblokLivePreview from '@/mixins/storyblokLivePreview'
+import storyblokLivePreview from "@/mixins/storyblokLivePreview";
 
 export default {
-  data () {
-    return { total: 0, data: { stories: [] } }
+  data() {
+    return { total: 0, data: { stories: [] } };
   },
-  asyncData (context) {
-    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
+  asyncData(context) {
+    let version =
+      context.query._storyblok || context.isDev ? "draft" : "published";
 
-    return context.app.$storyapi.get('cdn/stories', {
-      version: version,
-      starts_with: `arbeiten/`, // needs trailing / - will have a look if we can get rid of that as well.
-      cv: context.store.state.cacheVersion
-    }).then((res) => {
-      return res
-    }).catch((res) => {
-      context.error({ statusCode: res.response.status, message: res.response.data })
-    })
+    return context.app.$storyapi
+      .get("cdn/stories", {
+        version: version,
+        starts_with: `arbeiten/`, // needs trailing / - will have a look if we can get rid of that as well.
+        cv: context.store.state.cacheVersion
+      })
+      .then(res => {
+        return res;
+      })
+      .catch(res => {
+        context.error({
+          statusCode: res.response.status,
+          message: res.response.data
+        });
+      });
   }
-}
+};
 </script>
 
 <style lang="stylus" scoped>
-
-ul.projects 
+ul.projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: .5em;
-  grid-row-gap: .25em;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 0.25em;
   margin-bottom: 4rem;
+}
 
-.projects > li 
+.projects > li {
   position: relative;
   overflow: hidden;
+}
 
-.overlay 
+.overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
-  height: 99%;
+  height: calc(100% - 1.2em);
   width: 100%;
   left: 0;
   top: 0;
@@ -66,11 +74,13 @@ ul.projects
   -webkit-transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
+}
 
-.projects > li:hover .overlay 
+.projects > li:hover .overlay {
   opacity: 1;
+}
 
-.details 
+.details {
   position: absolute;
   text-align: center;
   padding-left: 1em;
@@ -85,24 +95,30 @@ ul.projects
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+}
 
-.projects > li:hover .details 
+.projects > li:hover .details {
   top: 50%;
   left: 50%;
   opacity: 1;
+}
 
-.details,
-.overlay 
+.details, .overlay {
   display: none;
-.projectMouseover 
-  color: white;
+}
 
-+lap()
-  .details,
-  .overlay 
+.projectMouseover {
+  color: white;
+}
+
++lap() {
+  .details, .overlay {
     display: inline;
-  ul.projects 
+  }
+
+  ul.projects {
     grid-template-columns: repeat(5, 1fr);
     margin: 0 auto 4rem;
-
+  }
+}
 </style>

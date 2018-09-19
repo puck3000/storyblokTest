@@ -90,7 +90,7 @@ ul.projects
   top: 50%;
   left: 50%;
   opacity: 1;
-
+≈
 .details,
 .overlay 
   display: none;
