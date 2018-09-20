@@ -1,8 +1,8 @@
 <template>
-    <ul class="projects">
+    <ul class="projects" id="arbeitenListe">
       <li :key="arbeit.content._uid" v-for="arbeit in data.stories">
         <nuxt-link tag="a" :to="'/' + arbeit.full_slug">
-        <p>{{arbeit.content.titel}}</p>
+        {{arbeit.content.titel}}
         </nuxt-link>
       </li>
     </ul>
@@ -31,6 +31,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
+#arbeitenListe 
+  li  
+    margin-bottom: 1em;
+    text-transform: uppercase
+  +tab()
+    text-align: center;
+    li  
+      font-size: 2em;
 
 </style>
+
