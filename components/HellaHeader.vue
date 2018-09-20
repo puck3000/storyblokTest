@@ -2,8 +2,13 @@
     <div id="helloHeader">
          <header class="space"> 
             <ul>
-                <li id="navButton" :class="{hidden : !isExpanded}">BackButton</li>
-                <li  @click="toggleExpanded">
+                <li id="navButton" @click="toggleExpanded">
+                    <transition name="fade" mode="out-in">
+                        <img v-if="!isExpanded" src="@/assets/img/Sandwich.svg" alt="Menu Button" key="notExpanded">
+                        <img v-else src="@/assets/img/BackButton_up.svg" alt="Back Button" key="isExpanded">
+                    </transition>
+                </li>    
+                <li>
                     <img id="mobLogo" src="@/assets/img/HELLASTUDIO_2Z.svg" alt="Hella Studio Logo">
                     <img id="lgLogo" src="@/assets/img/HELLASTUDIO_1Z.svg" alt="Hella Studio Logo">
                 </li>
@@ -74,6 +79,14 @@ export default {
             li 
                 &:first-child  
                     grid-column-start: span 2;
+                    img 
+                        width: 1.5em
+                        margin-top: .45em
+                        margin-left: .5em
+
+                    p 
+                        display: inline
+                        margin-bottom: .4em
                 &:nth-child(2) 
                     grid-column: 3 / 5;
                     text-align: center
@@ -123,7 +136,13 @@ export default {
             grid-column: 1 / 2;
         &.hidden
             opacity 0
-                    
+
+.fade-enter-active, .fade-leave-active 
+    transition: opacity .5s;
+
+.fade-enter, .fade-leave-to 
+    opacity: 0;
+
 
 </style>
 

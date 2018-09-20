@@ -20,13 +20,13 @@ auf grösse lead, zentriert
 done √
 
 Header
-- "tel" vor nummer raus
+- "tel" vor nummer raus √
 - buttons rein
 - smooth scroller rein
 - smiley smooth to top, logo to arbeiten
 
 navi
-- nix hover, nix aktiv
+- nix hover, nix aktiv √
 
 Insta
 - auf gross view oben links 
@@ -34,7 +34,7 @@ Insta
 
 Footer
 
-grösserer Abstand zum inhalt gro Abstand (8 rem)
+grösserer Abstand zum inhalt gro Abstand (8 rem) √
 
 FONT
 Semibold statt bold √
