@@ -10,10 +10,13 @@
         </div>
         </nuxt-link>
       </li>
+      <li id="arbeitenListeLink">
+        <nuxt-link  tag="a" :to="'/arbeiten/liste'">
+          <h4>Alle Arbeiten</h4>
+        </nuxt-link>
+      </li>
     </ul>
-    <nuxt-link tag="a" :to="'/arbeiten/liste'">
-      <h4>Alle Arbeiten</h4>
-    </nuxt-link>
+    
   </section>
 </template>
 
@@ -120,5 +123,22 @@ ul.projects {
     grid-template-columns: repeat(5, 1fr);
     margin: 0 auto 4rem;
   }
+  
+    
 }
+
+#arbeitenListeLink 
+  grid-column: 1 / 3
+  h4 
+    margin-top: 2em;
+    text-transform: uppercase
+  +tab()
+    grid-column: 1 / 2;
+    height: 3em;
+    h4 
+      text-align: center;
+   
+
+    
+
 </style>
