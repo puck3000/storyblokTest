@@ -11,7 +11,7 @@
                     <a href="mailto:hello@hellastudio.ch">MAIL</a>
                     <a id="tel" href="tel:+41798308072">
                         <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone"> 
-                        <p>Tel: +41 (0)79 830 80 72</p>
+                        <p>+41 (0)79 830 80 72</p>
                     </a>
                     
                 </li>

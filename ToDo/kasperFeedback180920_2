@@ -1,0 +1,51 @@
+Allgemein
+p 
+- kasperSize p 3 von 5 spalten √ => gruusig
+- laptopSite p 8 von 10 spalten √
+- darunter sein lassen √
+
+Leistungen
+
+Liste Dreispaltig wie bei Werbeagentur
+auf mobile Abstände:
+    - direkt nach lead grosser abstand
+    - immer nach listenpunkt gro abs
+
+=> Gruusig, lieber auf Navi Cols gehen.
+
+alle arbeiten
+auf spalte 1 wie wie navi-punkt
+auf grösse lead, zentriert
+
+done √
+
+Header
+- "tel" vor nummer raus
+- buttons rein
+- smooth scroller rein
+- smiley smooth to top, logo to arbeiten
+
+navi
+- nix hover, nix aktiv
+
+Insta
+- auf gross view oben links 
+- auf mobile als vierter navi punkt
+
+Footer
+
+grösserer Abstand zum inhalt gro Abstand (8 rem)
+
+FONT
+Semibold statt bold √
+
+
+BUG:
+- Refresh button => site not found
+
+Fragen an Storyblok:
+- Refresh button => site not found
+
+
+Rückmeldung an Kasper:
+- Ganz gruusig umbrüche bei lap()

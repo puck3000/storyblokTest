@@ -22,9 +22,14 @@ export default {
 
 <style lang="stylus" scoped>
 #mainFooter
-    margin-bottom: 3em
-    line-height: 1.2em
-    text-align: center
-    font-size: .8em
+  margin-top: 3em
+  +tab()
+    margin-top: 6em
+  margin-bottom: 3em
+  +tab()
+    margin-bottom: 6em
+  line-height: 1.2em
+  text-align: center
+  font-size: .8em
 </style>
 
