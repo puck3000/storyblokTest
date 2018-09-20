@@ -38,9 +38,9 @@ export default {
         text-transform: uppercase
         height: 3em
         padding-top: 1em
-        border-top: dashed 2px lighten($secondary, 20%)
+        border-top: solid 2px $main
         &:last-child
-            border-bottom: dashed 2px lighten($secondary, 20%)
+            border-bottom: solid 2px $main
         a 
             text-decoration: none
     +lap()
