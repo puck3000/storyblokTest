@@ -1,3 +1,5 @@
+@import 'mixins.styl'
+
 html, body, #__nuxt, #__layout
     min-width: 100vw
     background-color: $bgc
@@ -22,4 +24,15 @@ p strong {
 p {
     margin-bottom: 1em
 }
+
+p.lead 
+    +lap()
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        p 
+            grid-column: 2 / 5;
+    +kasper()
+        grid-template-columns: repeat(10, 1fr);
+        p 
+            grid-column: 2 / 10;
 
