@@ -69,6 +69,7 @@ ul.projects {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
+  height: 97%;
   left: 0;
   top: 0;
   bottom: 0;

@@ -48,6 +48,8 @@ export default {
         display: grid 
         grid-template-columns: repeat(3, 1fr)
         justify-items: center;
+        a 
+            text-decoration: none
         li
             text-align: center
             img 
@@ -58,7 +60,7 @@ export default {
             align-self: center;
             a
                 padding: .15em 1em;
-                background-color: white;
+                background:rgba(255,255,255,0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;

@@ -4,7 +4,10 @@
             <ul>
                 <li id="navButton" @click="toggleExpanded">
                     <transition name="fade" mode="out-in">
-                        <img v-if="!isExpanded" src="@/assets/img/Sandwich.svg" alt="Menu Button" key="notExpanded">
+                        <div  v-if="!isExpanded" key="notExpanded">
+                            <img src="@/assets/img/Sandwich.svg" alt="Menu Button" >
+                            <p>MENU</p>
+                        </div>
                         <img v-else src="@/assets/img/BackButton_up.svg" alt="Back Button" key="isExpanded">
                     </transition>
                 </li>    
@@ -13,11 +16,14 @@
                     <img id="lgLogo" src="@/assets/img/HELLASTUDIO_1Z.svg" alt="Hella Studio Logo">
                 </li>
                 <li>
-                    <a href="mailto:hello@hellastudio.ch">MAIL</a>
-                    <a id="tel" href="tel:+41798308072">
-                        <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone"> 
-                        <p>+41 (0)79 830 80 72</p>
-                    </a>
+                    <div>
+                        <a href="mailto:hello@hellastudio.ch">MAIL</a>
+                        <a id="tel" href="tel:+41798308072">
+                            <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone"> 
+                            <p class="space">+41 (0)79 830 80 72</p>
+                        </a>
+                    </div>
+                    
                     
                 </li>
              </ul>
@@ -75,18 +81,27 @@ export default {
             grid-template-columns: repeat(6, 1fr);
             +lap()
                 grid-template-columns: repeat(5, 1fr);
+            a 
+                text-decoration: none
                 
             li 
                 &:first-child  
                     grid-column-start: span 2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div 
+                        height: 100%;
+                        display: grid;
+                        grid-template-columns: 22% auto;
+                        grid-column-gap: .5em;
+                        align-content: end
                     img 
                         width: 1.5em
-                        margin-top: .45em
-                        margin-left: .5em
-
+                        display inline
                     p 
                         display: inline
-                        margin-bottom: .4em
+                    
                 &:nth-child(2) 
                     grid-column: 3 / 5;
                     text-align: center
@@ -104,22 +119,31 @@ export default {
                         #lgLogo
                             display block
                 &:last-child
-                    align-self: center;
                     grid-column-start: span 2;
-                    display: grid
-                    grid-template-columns: repeat(2, 1fr)
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     +lap()
                         grid-column: 5 / 6 ;
                         grid-template-columns: 1fr
-                    a 
-                        text-decoration: none
-                        align-self: center;
-                        justify-self: center;
-                        +mobile()
-                            &:first-child 
-                                justify-self: end;
-                            img 
-                                width: 1.5em
+                        width: 100%
+                        text-align: center
+                    
+                    +mobile()
+                        div 
+                            height: 100%;
+                            display: grid;
+                            grid-template-columns: auto 22%;
+                            grid-column-gap: .5em;
+                            align-content: center
+                        img 
+                            width: 1.5em
+                            display inline
+                        a 
+                            display: inline
+                            text-decoration: none
+                            text-align: right
                     #tel 
                         img 
                             +lap()
@@ -127,7 +151,9 @@ export default {
                         p 
                             display: none 
                             +lap()
-                                display: inline
+                                display block
+                                margin-bottom 0
+                            
     #navButton
         opacity 1
         transition: opacity .5s ease-in-out
