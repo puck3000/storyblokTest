@@ -3,8 +3,11 @@
         <div id="subheader">
          <nav id="subnav">
              <ul>
-                 <li>
-                     <a class="space" href="#">BACK</a>
+                 <li id="back">
+                     <a class="space" href="__nuxt" v-scroll-to="{el: '#__nuxt'}">
+                         <img src="@/assets/img/BackButton_up.svg" alt="Back to top Button">
+                         <p>BACK</p>
+                     </a>
                  </li>
                  <li>
                      <a href="#"><img src="@/assets/img/HELLA_Smiley.svg" alt="Hella Smile HomeButton"></a>
@@ -51,5 +54,34 @@ export default {
                 width: 50%
                 +lap()
                     width: 80%
+        #back 
+            align-self: center;
+            a
+                padding: .15em 1em;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            p, img
+                display inline
+            
+            p
+                margin-top: .5em
+                margin-bottom .5em
+            img 
+                width: 1.5em
+                margin-right .5em
+                padding-top: .5em
+
+            +tab()
+                a
+                    padding: .5em 2em;
+                p
+                    margin-top: .5em
+                    margin-bottom .5em
+                img 
+                    width: 1.5em
+                    margin-right 1em
+                    padding-top: .5em
 </style>
 

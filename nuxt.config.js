@@ -80,7 +80,12 @@ module.exports = {
   },
   
   plugins: [
-    '~/plugins/components'
+    {
+      src: '~/plugins/components'
+    },
+    {
+      src: "~plugins/vue-scrollto.js"
+    } 
   ],
   router: {
     middleware: 'cache'

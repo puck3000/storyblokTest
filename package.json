@@ -17,7 +17,8 @@
     "nuxt": "^1.0.0",
     "storyblok-nuxt": "^0.0.9",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^3.0.2",
+    "vue-scrollto": "^2.13.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
