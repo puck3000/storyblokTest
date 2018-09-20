@@ -59,12 +59,12 @@ ul.projects {
 .projects > li {
   position: relative;
   overflow: hidden;
+
 }
 
 .overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
-  height: calc(100% - 1.2em);
   width: 100%;
   left: 0;
   top: 0;
