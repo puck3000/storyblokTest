@@ -1,6 +1,6 @@
 <template>
 <div class="leistung">
-    <div class="lapcenter lead bmarg2" v-html="$md.render(blok.leistungentext)"></div>
+    <p class="lapcenter lead bmarg2" v-html="$md.render(blok.leistungentext)"></p>
     <div class="liste" v-html="$md.render(blok.liste)"></div>
 </div>
     
