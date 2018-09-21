@@ -8,7 +8,7 @@
             <source media="(min-width: 1441px)" :srcset="resize(bild.mainpic, '2010x0')">
             <img :src="bild.mainpic" :alt="blok.titel">
         </picture>
-        <figcaption v-editable="blok" v-html="$md.render(blok.beschreibung)"></figcaption>
+        <figcaption class="lead" v-editable="blok" v-html="$md.render(blok.beschreibung)"></figcaption>
     </figure>
          
     <div class="casepicGrid">
@@ -68,12 +68,13 @@ methods: {
         .half
             grid-column-start: span 1;
     figcaption 
-        max-width: 60%;
-        text-align: left;
-        margin: 2em 0 
+        margin: 2em 
+        text-align: center 
 +mobile()
     h1.lead 
         font-weight: bold 
     li 
-        margin-bottom: .5em
+        margin-bottom: .25em
+    figcaption
+        margin: 1em auto
 </style>

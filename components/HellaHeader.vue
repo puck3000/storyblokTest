@@ -11,7 +11,7 @@
                     </section>
                     <section id="lapLeftHead">
                         <a href="#" class="space">
-                            INSTA
+                            <img src="@/assets/img/INSTA_oval.svg" alt="INSTAGRAM">
                         </a>
                     </section>
                 </li>    
@@ -89,7 +89,9 @@ export default {
                     grid-column-start: span 2;
                     +lap()
                         grid-column: 1 / 2
-                        margin: 2em auto 0;
+                        margin: 1.25em auto 0;
+                        text-align: center
+                        
                     +mobile()
                         display: flex;
                         justify-content: center;
@@ -102,6 +104,8 @@ export default {
                         align-content: end
                     img 
                         width: 1.5em
+                        +lap()
+                            width: 120px
                         display inline
                     p 
                         display: inline

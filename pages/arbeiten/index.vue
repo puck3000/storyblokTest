@@ -4,7 +4,13 @@
       <li :key="arbeit.content._uid" v-for="arbeit in data.stories">
         <nuxt-link tag="a" :to="'/' + arbeit.full_slug">
           <div class="overlay"></div>
-            <img :src="arbeit.content.mainpic" alt="">
+            <picture>
+                    <source media="(max-width: 768px)" :srcset="arbeit.content.squarePic">
+                    <source media="(min-width: 769px)" :srcset="arbeit.content.mainpic">
+                    <img :src="arbeit.content.mainpic" :alt="arbeit.content.titel">
+            </picture>
+
+
         <div class="details">
           <h4 class="projectMouseover">{{arbeit.content.mouseover}}</h4>
         </div>
