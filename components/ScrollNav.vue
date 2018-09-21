@@ -5,8 +5,7 @@
              <ul>
                  <li id="back">
                      <a class="space" href="__nuxt" v-scroll-to="{el: '#__nuxt'}">
-                         <img src="@/assets/img/BackButton_up.svg" alt="Back to top Button">
-                         <p>BACK</p>
+                         BACK
                      </a>
                  </li>
                  <li>
@@ -60,7 +59,6 @@ export default {
             align-self: center;
             a
                 padding: .15em 1em;
-                background:rgba(255,255,255,0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
