@@ -21,7 +21,7 @@
                 </nuxt-link>
                 <li>
                     <a href="mailto:hello@hellastudio.ch">MAIL</a>
-                    <a href="#" id="tel">
+                    <a href="tel:+41798308072" id="tel">
                         <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone">
                         <p class="space">+41 (0)79 830 80 72</p>
                     </a>
