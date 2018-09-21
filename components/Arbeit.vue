@@ -42,6 +42,7 @@ props: [
     .casepicGrid ul
         display: grid 
         grid-template-columns: repeat(2, 1fr)
+        grid-gap: 1em
         li 
             grid-column-start: span 2;
         .half
@@ -53,4 +54,6 @@ props: [
 +mobile()
     h1.lead 
         font-weight: bold 
+    li 
+        margin-bottom: .5em
 </style>

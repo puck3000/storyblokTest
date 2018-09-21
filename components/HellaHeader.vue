@@ -2,19 +2,23 @@
     <div id="helloHeader">
          <header class="space"> 
             <ul>
-                <li id="navButton" @click="toggleExpanded">
-                    <transition name="fade" mode="out-in">
-                        <div  v-if="!isExpanded" key="notExpanded">
-                            <img src="@/assets/img/Sandwich.svg" alt="Menu Button" >
-                            <p>MENU</p>
-                        </div>
-                        <img v-else src="@/assets/img/BackButton_up.svg" alt="Back Button" key="isExpanded">
-                    </transition>
-                </li>    
                 <li>
+                    <section id="mobileLeftHead" @click="toggleExpanded">
+                        <transition name="fade" mode="out-in">
+                            <img id="navButton" v-if="!isExpanded" key="notExpanded" src="@/assets/img/Sandwich.svg" alt="Menu Button" >
+                            <img  v-else src="@/assets/img/BackButton_up.svg" alt="Back Button" key="isExpanded">
+                        </transition>
+                    </section>
+                    <section id="lapLeftHead">
+                        <p>
+                            insta!
+                        </p>
+                    </section>
+                </li>    
+                <nuxt-link to="/" tag="li">
                     <img id="mobLogo" src="@/assets/img/HELLASTUDIO_2Z.svg" alt="Hella Studio Logo">
                     <img id="lgLogo" src="@/assets/img/HELLASTUDIO_1Z.svg" alt="Hella Studio Logo">
-                </li>
+                </nuxt-link>
                 <li>
                     <div>
                         <a href="mailto:hello@hellastudio.ch">MAIL</a>
@@ -22,9 +26,7 @@
                             <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone"> 
                             <p class="space">+41 (0)79 830 80 72</p>
                         </a>
-                    </div>
-                    
-                    
+                    </div>  
                 </li>
              </ul>
         </header>
@@ -101,8 +103,16 @@ export default {
                         display inline
                     p 
                         display: inline
+                    #lapLeftHead 
+                        display: none
+                    +lap()
+                        #lapLeftHead 
+                            display inline
+                        #mobileLeftHead 
+                            display: none
                     
                 &:nth-child(2) 
+                    cursor: pointer;
                     grid-column: 3 / 5;
                     text-align: center
                     +mobile()
