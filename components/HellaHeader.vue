@@ -10,9 +10,9 @@
                         </transition>
                     </section>
                     <section id="lapLeftHead">
-                        <p>
-                            insta!
-                        </p>
+                        <a href="#" class="space">
+                            INSTA
+                        </a>
                     </section>
                 </li>    
                 <nuxt-link to="/" tag="li">
@@ -20,13 +20,11 @@
                     <img id="lgLogo" src="@/assets/img/HELLASTUDIO_1Z.svg" alt="Hella Studio Logo">
                 </nuxt-link>
                 <li>
-                    <div>
-                        <a href="mailto:hello@hellastudio.ch">MAIL</a>
-                        <a id="tel" href="tel:+41798308072">
-                            <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone"> 
-                            <p class="space">+41 (0)79 830 80 72</p>
-                        </a>
-                    </div>  
+                    <a href="mailto:hello@hellastudio.ch">MAIL</a>
+                    <a href="#" id="tel">
+                        <img src="@/assets/img/phone_Icon_key.svg" alt="Hella Studio Phone">
+                        <p class="space">+41 (0)79 830 80 72</p>
+                    </a>
                 </li>
              </ul>
         </header>
@@ -89,9 +87,13 @@ export default {
             li 
                 &:first-child  
                     grid-column-start: span 2;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    +lap()
+                        grid-column: 1 / 2
+                        margin: 2em auto 0;
+                    +mobile()
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     div 
                         height: 100%;
                         display: grid;
@@ -130,31 +132,31 @@ export default {
                             display block
                 &:last-child
                     grid-column-start: span 2;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
                     +lap()
                         grid-column: 5 / 6 ;
                         grid-template-columns: 1fr
                         width: 100%
                         text-align: center
+                        margin-top: 2em
                     
-                    +mobile()
-                        div 
-                            height: 100%;
-                            display: grid;
-                            grid-template-columns: auto 22%;
-                            grid-column-gap: .5em;
-                            align-content: center
+                    +mobile()   
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;                        
                         img 
                             width: 1.5em
                             display inline
+                            height 100%
                         a 
                             display: inline
                             text-decoration: none
                             text-align: right
+                            margin-right: 1em
+                        #tel 
+                            height: 100%
                     #tel 
+                        +lap()
+                            display: block
                         img 
                             +lap()
                                 display: none
