@@ -2,13 +2,24 @@
 <div>
     <h1 class="lapcenter lead bmarg1">{{blok.titel}}</h1>
     <figure>
-        <img :src="blok.mainpic" :alt="blok.titel">
+        <picture>
+            <source media="(max-width: 768px)" :srcset="resize(bild.mainpic, '768x0')">
+            <source media="(max-width: 1440px)" :srcset="resize(bild.mainpic, '1440x0')">
+            <source media="(min-width: 1441px)" :srcset="resize(bild.mainpic, '2010x0')">
+            <img :src="bild.mainpic" :alt="blok.titel">
+        </picture>
         <figcaption v-editable="blok" v-html="$md.render(blok.beschreibung)"></figcaption>
-    </figure> 
+    </figure>
+         
     <div class="casepicGrid">
       <ul>
           <li v-for="pic in blok.Bilder" :key="pic.uid" :class="{ half: pic.name}">
-            <img :src="pic.filename" alt="blok.titel">
+            <picture>
+                <source media="(max-width: 768px)" :srcset="resize(pic.filename, '768x0')">
+                <source media="(max-width: 1440px)" :srcset="resize(pic.filename, '1440x0')">
+                <source media="(min-width: 1441px)" :srcset="resize(pic.filename, '2010x0')">
+                <img :src="pic.filename" :alt="blok.titel">
+            </picture>
           </li>
       </ul>
     </div>
@@ -17,10 +28,19 @@
 </template>
 
 <script>
+import { isEditMode, resize } from '@/plugins/helper'
 export default {
 props: [
    'blok'
-]
+],
+methods: {
+    resize
+  },
+    data(){
+    return {
+      bild: this.blok
+        }
+    }
 }
 </script>
 

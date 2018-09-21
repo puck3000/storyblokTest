@@ -87,7 +87,10 @@ module.exports = {
     },
     {
       src: "~plugins/vue-scrollto.js"
-    } 
+    }, 
+    {
+      src: "~plugins/helper.js"
+    }
   ],
   router: {
     middleware: 'cache'

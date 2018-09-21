@@ -1,8 +1,10 @@
 Allgemein
 p 
-- kasperSize p 3 von 5 spalten √ => gruusig
+- kasperSize p 3 von 5 spalten √ => gruusig zwischen ipad und kl lap
 - laptopSite p 8 von 10 spalten √
 - darunter sein lassen √
+
+=> wieder raus, 1-2 ems rein 
 
 Leistungen
 
@@ -11,7 +13,7 @@ auf mobile Abstände:
     - direkt nach lead grosser abstand
     - immer nach listenpunkt gro abs
 
-=> Gruusig, lieber auf Navi Cols gehen.
+=> Gruusig, lieber auf Navi Cols gehen?
 
 alle arbeiten
 auf spalte 1 wie wie navi-punkt
@@ -21,6 +23,8 @@ done √
 
 Header
 - "tel" vor nummer raus √
+=> 
+back button ohne hinterlegung und pfeil
 - buttons rein
 - smooth scroller rein
 - smiley smooth to top, logo to arbeiten
