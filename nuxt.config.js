@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         name: 'twitter:card',
-        value: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpeg'
+        value: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpg'
       },
       {
         name: 'twitter:description',
@@ -43,11 +43,11 @@ module.exports = {
       },
       {
         name: 'og:url',
-        content: 'http://hellastudio.ch'
+        content: 'https://hellacms.netlify.com/'
       },
       {
         name: 'og:image',
-        content: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpeg'
+        content: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpg'
       },
       {
         name: 'og:description',
