@@ -4,12 +4,12 @@
          <nav id="subnav">
              <ul>
                  <li id="back">
-                     <a class="space" href="__nuxt" v-scroll-to="{el: '#__nuxt'}">
+                     <a class="space" href="#" v-scroll-to="{el: 'html'}">
                          BACK
                      </a>
                  </li>
                  <li>
-                     <a href="#"><img src="@/assets/img/HELLA_Smiley.svg" alt="Hella Smile HomeButton"></a>
+                     <a href="#" v-scroll-to="{el: 'html'}"><img src="@/assets/img/HELLA_Smiley.svg" alt="Hella Smile HomeButton"></a>
                  </li>
                  <li>
 
