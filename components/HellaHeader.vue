@@ -3,7 +3,7 @@
          <header class="space"> 
             <ul>
                 <li>
-                    <section id="mobileLeftHead" @click="toggleExpanded">
+                    <section id="mobileLeftHead" @click="toggleExpanded" >
                         <transition name="fade" mode="out-in">
                             <img id="navButton" v-if="!isExpanded" key="notExpanded" src="@/assets/img/Sandwich.svg" alt="Menu Button" >
                             <img  v-else src="@/assets/img/BackButton_up.svg" alt="Back Button" key="isExpanded">
@@ -28,7 +28,7 @@
                 </li>
              </ul>
         </header>
-        <navigation :isExpanded="isExpanded"/>
+        <navigation :isExpanded="isExpanded" v-on:toggle="toggleExpanded" />
         <scroll-nav :isVisible="isVisible" />
     </div>
 </template>

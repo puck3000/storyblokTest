@@ -1,8 +1,8 @@
 <template>
     <nav id="mainNav" :class="{expanded: isExpanded}" class="space">
         <ul>
-            <li v-for="link in navLinks" :key="link.name"  >
-                <nuxt-link tag="a" :to="link.url">{{link.name}}</nuxt-link>
+            <li v-for="link in navLinks" :key="link.name" v-on:click="$emit('toggle')">
+                <nuxt-link tag="a" :to="link.url" >{{link.name}}</nuxt-link>
             </li>
             
         </ul>
@@ -21,6 +21,8 @@ export default {
             ]
         }
     },
+    
+    
 }
 </script>
 
