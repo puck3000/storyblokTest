@@ -64,7 +64,7 @@ export default {
       {
         hid: 'og:url',
         name: 'og:url',
-        content: 'https://hellacms.netlify.com/'
+        content: 'https://hellacms.netlify.com/' + this.story.full_slug
       },
       {
         hid: 'og:image',
