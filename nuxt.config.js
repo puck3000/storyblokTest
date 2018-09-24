@@ -8,7 +8,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'de',
     },
-    title: 'HELLA STUDIO official Site',
+    title: 'HELLA STUDIO',
     meta: [{
         charset: 'utf-8'
       },
@@ -35,7 +35,7 @@ module.exports = {
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'HELLA STUDIO - OFFICIAL SITE'
+        content: 'HELLA STUDIO'
       },
       {
         name: 'og:type',
