@@ -61,13 +61,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-ul.projects {
+ul.projects 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 0.5em;
-  grid-row-gap: 0.25em;
+  grid-gap: 0.5em;
   margin-bottom: 4rem;
-}
+  +mobile()
+    grid-gap: 0.25em;
+
 
 .projects > li {
   position: relative;
@@ -79,7 +80,7 @@ ul.projects {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
-  height: 97%;
+  height: 100%;
   left: 0;
   top: 0;
   bottom: 0;
@@ -149,7 +150,9 @@ ul.projects {
     h4 
       text-align: center;
    
+picture 
+  img 
+    vertical-align: middle;
 
-    
 
 </style>
