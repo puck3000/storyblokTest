@@ -16,24 +16,24 @@ module.exports = {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
       },
+  
       {
-        hid: 'HELLA STUDIO',
-        name: 'HELLA STUDIO',
-        content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
-      },
-      {
+        hid: 'description',
         name: 'description',
         content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       },
       {
+        hid: 'twitter:card',
         name: 'twitter:card',
         value: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpg'
       },
       {
+        hid: 'twitter:description',
         name: 'twitter:description',
         value: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       },
       {
+        hid: 'og:title',
         name: 'og:title',
         content: 'HELLA STUDIO - OFFICIAL SITE'
       },
@@ -42,14 +42,17 @@ module.exports = {
         content: 'article'
       },
       {
+        hid: 'og:url',
         name: 'og:url',
         content: 'https://hellacms.netlify.com/'
       },
       {
+        hid: 'og:image',
         name: 'og:image',
         content: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpg'
       },
       {
+        hid: 'og:description',
         name: 'og:description',
         content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       }

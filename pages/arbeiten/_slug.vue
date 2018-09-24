@@ -42,39 +42,37 @@ export default {
         content: 'width=device-width, initial-scale=1'
       },
       {
-        hid: 'HELLA STUDIO',
-        name: arbeit.titel + ' | HELLA STUDIO',
-        content: arbeit.beschreibung
-      },
-      {
+        hid: 'description',
         name: 'description',
         content: arbeit.beschreibung
       },
       {
+        hid: 'twitter:card',
         name: 'twitter:card',
         value: arbeit.mainpic
       },
       {
+        hid: 'twitter:description',
         name: 'twitter:description',
         value: arbeit.beschreibung
       },
       {
+        hid: 'og:title',
         name: 'og:title',
         content: arbeit.titel + ' | HELLA STUDIO',
       },
       {
-        name: 'og:type',
-        content: 'article'
-      },
-      {
+        hid: 'og:url',
         name: 'og:url',
-        content: 'https://hellacms.netlify.com/'
+        content: 'https://hellacms.netlify.com/' + arbeit.full_slug
       },
       {
+        hid: 'og:image',
         name: 'og:image',
         content: arbeit.mainpic
       },
       {
+        hid: 'og:description',
         name: 'og:description',
         content: arbeit.beschreibung
       }
