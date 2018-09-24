@@ -29,6 +29,58 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
+  },
+  head () {
+    let arbeit = this.story.content;
+    return {
+      title: arbeit.titel + ' | HELLASTUDIO',
+      meta: [{
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'HELLA STUDIO',
+        name: arbeit.titel + ' | HELLA STUDIO',
+        content: arbeit.beschreibung
+      },
+      {
+        name: 'description',
+        content: arbeit.beschreibung
+      },
+      {
+        name: 'twitter:card',
+        value: arbeit.mainpic
+      },
+      {
+        name: 'twitter:description',
+        value: arbeit.beschreibung
+      },
+      {
+        name: 'og:title',
+        content: arbeit.titel + ' | HELLA STUDIO',
+      },
+      {
+        name: 'og:type',
+        content: 'article'
+      },
+      {
+        name: 'og:url',
+        content: 'https://hellacms.netlify.com/'
+      },
+      {
+        name: 'og:image',
+        content: arbeit.mainpic
+      },
+      {
+        name: 'og:description',
+        content: arbeit.beschreibung
+      }
+
+    ],
+    }
   }
 }
 </script>
