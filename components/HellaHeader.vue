@@ -10,7 +10,7 @@
                         </transition>
                     </section>
                     <section id="lapLeftHead">
-                        <a href="#" class="space">
+                        <a href="https://www.instagram.com/hellastudio.ch/" target="_blank" rel="noopener" class="space">
                             <img src="@/assets/img/INSTA_oval.svg" alt="INSTAGRAM">
                         </a>
                     </section>
