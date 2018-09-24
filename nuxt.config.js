@@ -8,7 +8,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'de',
     },
-    title: 'HELLA STUDIO',
+    title: 'HELLA STUDIO official Site',
     meta: [{
         charset: 'utf-8'
       },
@@ -19,12 +19,33 @@ module.exports = {
       {
         hid: 'HELLA STUDIO',
         name: 'HELLA STUDIO',
-        content: 'HELLA STUDIO official site'
+        content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       },
       {
         name: 'Description',
-        content: 'HELLA STUDIO official site'
+        content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+      },
+      {
+        name: 'twitter:card',
+        value: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+      },
+      {
+        name: 'og:title',
+        content: 'HELLA STUDIO - OFFICIAL SITE'
+      },
+      {
+        name: 'og:type',
+        content: 'article'
+      },
+      {
+        name: 'og:url',
+        content: 'http://hellastudio.ch'
+      },
+      {
+        name: 'og:image',
+        content: ''
       }
+
     ],
     link: [{
       rel: 'icon',

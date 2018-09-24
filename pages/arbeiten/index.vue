@@ -5,8 +5,8 @@
         <nuxt-link tag="a" :to="'/' + arbeit.full_slug">
           <div class="overlay"></div>
             <picture>
-                    <source media="(max-width: 768px)" :srcset="arbeit.content.squarePic">
-                    <source media="(min-width: 769px)" :srcset="arbeit.content.mainpic">
+                    <source media="(max-width: 768px)" :srcset="resize(arbeit.content.squarePic, '250x0')">
+                    <source media="(min-width: 769px)" :srcset="resize(arbeit.content.mainpic, '500x0')">
                     <img :src="arbeit.content.mainpic" :alt="arbeit.content.titel">
             </picture>
 
@@ -27,7 +27,8 @@
 </template>
 
 <script>
-import storyblokLivePreview from "@/mixins/storyblokLivePreview";
+import storyblokLivePreview from "@/mixins/storyblokLivePreview"
+import { isEditMode, resize } from '@/plugins/helper'
 
 export default {
   data() {
@@ -52,6 +53,9 @@ export default {
           message: res.response.data
         });
       });
+  },
+  methods: {
+    resize
   }
 };
 </script>
