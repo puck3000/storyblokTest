@@ -44,6 +44,10 @@ module.exports = {
       {
         name: 'og:image',
         content: ''
+      },
+      {
+        name: 'og:description',
+        content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       }
 
     ],
