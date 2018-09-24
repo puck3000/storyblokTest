@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         name: 'twitter:card',
-        value: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        value: '@/HELLASTUDIO_smile.jpeg'
       },
       {
         name: 'twitter:description',
