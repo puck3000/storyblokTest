@@ -148,7 +148,7 @@ export default {
                         justify-content: center;
                         align-items: center;                        
                         img 
-                            width: 1.5em
+                            width: 2em
                             display inline
                             height 100%
                         a 
