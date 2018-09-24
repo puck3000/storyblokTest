@@ -49,7 +49,7 @@ export default {
       {
         hid: 'twitter:card',
         name: 'twitter:card',
-        value: arbeit.mainpic
+        value: 'https://hellacms.netlify.com/' + arbeit.mainpic
       },
       {
         hid: 'twitter:description',
@@ -69,7 +69,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: arbeit.mainpic
+        content: 'https://hellacms.netlify.com/' + arbeit.mainpic
       },
       {
         hid: 'og:description',
