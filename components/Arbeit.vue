@@ -77,4 +77,7 @@ methods: {
         margin-bottom: .25em
     figcaption
         margin: 1em auto
+picture
+    img 
+        vertical-align: middle;
 </style>
