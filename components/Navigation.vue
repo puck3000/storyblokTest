@@ -15,7 +15,7 @@ export default {
     data(){
         return {
             navLinks: [
-                {name: 'Werbeagentur', url: '/agentur'},
+                {name: 'Agentur', url: '/agentur'},
                 {name: 'Leistungen', url: '/leistungen'},
                 {name: 'Arbeiten', url: '/arbeiten'}
             ]
