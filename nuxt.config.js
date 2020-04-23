@@ -1,4 +1,4 @@
-const axios = require('axios') 
+const axios = require('axios')
 
 module.exports = {
   /*
@@ -16,11 +16,11 @@ module.exports = {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
       },
-  
+
       {
         hid: 'description',
         name: 'description',
-        content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        content: 'Wir sind HELLA STUDIO, die neue Kreativagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       },
       {
         hid: 'twitter:card',
@@ -30,7 +30,7 @@ module.exports = {
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        value: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        value: 'Wir sind HELLA STUDIO, die neue Kreativagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       },
       {
         hid: 'og:title',
@@ -54,7 +54,7 @@ module.exports = {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Wir sind HELLA STUDIO, die neue Werbeagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        content: 'Wir sind HELLA STUDIO, die neue Kreativagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
       }
 
     ],
@@ -70,18 +70,18 @@ module.exports = {
     start_url: '/',
     theme_color: '#ffffff',
     background_color: '#505050'
-  
-},	  
+
+  },
   /*
    ** Customize the progress bar color
    */
   loading: false,
 
-  
+
   /*
    ** Build configuration
    */
-  
+
   build: {
     /*
      ** Run ESLint on save
@@ -104,7 +104,10 @@ module.exports = {
     }
   },
   modules: [
-    ['storyblok-nuxt', {accessToken: 'hkfmsXBsZZcwty7Vk4C5kQtt', cacheProvider: 'memory'}], 
+    ['storyblok-nuxt', {
+      accessToken: 'hkfmsXBsZZcwty7Vk4C5kQtt',
+      cacheProvider: 'memory'
+    }],
     ['@nuxtjs/markdownit']
   ],
   markdownit: {
@@ -112,14 +115,13 @@ module.exports = {
     breaks: true,
     html: true
   },
-  
-  plugins: [
-    {
+
+  plugins: [{
       src: '~/plugins/components'
     },
     {
       src: "~plugins/vue-scrollto.js"
-    }, 
+    },
     {
       src: "~plugins/helper.js"
     }
@@ -133,7 +135,7 @@ module.exports = {
       const per_page = 1000
       const version = 'published'
       let cache_version = 0
-      
+
       let page = 1
 
       // other routes that are not in Storyblok with their slug.
@@ -144,7 +146,7 @@ module.exports = {
 
         // timestamp of latest publish
         cache_version = space_res.data.space.version
-      
+
         // Call first Page of the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
         axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}&cv=${cache_version}`).then((res) => {
           Object.keys(res.data.links).forEach((key) => {
@@ -156,12 +158,12 @@ module.exports = {
           // Check if there are more pages available otherwise execute callback with current routes.
           const total = res.headers.total
           const maxPage = Math.ceil(total / per_page)
-          if(maxPage <= 1) {
+          if (maxPage <= 1) {
             callback(null, routes)
           }
 
           // Since we know the total we now can pregenerate all requests we need to get all Links
-          let contentRequests = [] 
+          let contentRequests = []
           for (let page = 2; page <= maxPage; page++) {
             contentRequests.push(axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}`))
           }
@@ -175,12 +177,11 @@ module.exports = {
                 }
               })
             })
-          
+
             callback(null, routes)
           })).catch(callback)
         })
-      }) 
+      })
     }
   }
 };
-
