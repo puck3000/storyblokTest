@@ -23,8 +23,8 @@
 
 <script>
 export default {
-    props: ['isVisible']
-}
+  props: ["isVisible"]
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -52,9 +52,9 @@ export default {
         li
             text-align: center
             img 
-                width: 50%
+                width: 25%
                 +lap()
-                    width: 80%
+                    width: 30%
         #back 
             align-self: center;
             a
@@ -84,4 +84,3 @@ export default {
                     margin-right 1em
                     padding-top: .5em
 </style>
-

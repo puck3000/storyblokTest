@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require("axios");
 
 module.exports = {
   /*
@@ -6,77 +6,80 @@ module.exports = {
    */
   head: {
     htmlAttrs: {
-      lang: 'de',
+      lang: "de"
     },
-    title: 'HELLA STUDIO',
-    meta: [{
-        charset: 'utf-8'
+    title: "HELLA STUDIO",
+    meta: [
+      {
+        charset: "utf-8"
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
 
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Wir sind HELLA STUDIO, die neue Kreativagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        hid: "description",
+        name: "description",
+        content:
+          "Wir sind HELLA STUDIO, die Full Service Kreativagentur aus Bern. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First."
       },
       {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        value: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpg'
+        hid: "twitter:card",
+        name: "twitter:card",
+        value: "https://hellacms.netlify.com/HELLASTUDIO_smile.jpg"
       },
       {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        value: 'Wir sind HELLA STUDIO, die neue Kreativagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        hid: "twitter:description",
+        name: "twitter:description",
+        value:
+          "Wir sind HELLA STUDIO, die Full Service Kreativagentur aus Bern. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First."
       },
       {
-        hid: 'og:title',
-        name: 'og:title',
-        content: 'HELLA STUDIO'
+        hid: "og:title",
+        name: "og:title",
+        content: "HELLA STUDIO"
       },
       {
-        name: 'og:type',
-        content: 'article'
+        name: "og:type",
+        content: "article"
       },
       {
-        hid: 'og:url',
-        name: 'og:url',
-        content: 'https://hellacms.netlify.com/'
+        hid: "og:url",
+        name: "og:url",
+        content: "https://hellacms.netlify.com/"
       },
       {
-        hid: 'og:image',
-        name: 'og:image',
-        content: 'https://hellacms.netlify.com/HELLASTUDIO_smile.jpg'
+        hid: "og:image",
+        name: "og:image",
+        content: "https://hellacms.netlify.com/HELLASTUDIO_smile.jpg"
       },
       {
-        hid: 'og:description',
-        name: 'og:description',
-        content: 'Wir sind HELLA STUDIO, die neue Kreativagentur aus Burgdorf. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First.'
+        hid: "og:description",
+        name: "og:description",
+        content:
+          "Wir sind HELLA STUDIO, die Full Service Kreativagentur aus Bern. Wir lieben es zu Experimentieren, unsere Arbeitsweise ist aber stets Concept-First."
       }
-
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      }
+    ]
   },
   manifest: {
-    name: 'Hellastudio',
-    short_name: 'Hellastudio',
-    start_url: '/',
-    theme_color: '#ffffff',
-    background_color: '#505050'
-
+    name: "Hellastudio",
+    short_name: "Hellastudio",
+    start_url: "/",
+    theme_color: "#ffffff",
+    background_color: "#505050"
   },
   /*
    ** Customize the progress bar color
    */
   loading: false,
-
 
   /*
    ** Build configuration
@@ -87,28 +90,28 @@ module.exports = {
      ** Run ESLint on save
      */
     styleResources: {
-      stylus: './assets/styles/main.styl'
+      stylus: "./assets/styles/main.styl"
     },
-    extend(config, {
-      isDev,
-      isClient
-    }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
         });
       }
     }
   },
   modules: [
-    ['storyblok-nuxt', {
-      accessToken: 'hkfmsXBsZZcwty7Vk4C5kQtt',
-      cacheProvider: 'memory'
-    }],
-    ['@nuxtjs/markdownit']
+    [
+      "storyblok-nuxt",
+      {
+        accessToken: "hkfmsXBsZZcwty7Vk4C5kQtt",
+        cacheProvider: "memory"
+      }
+    ],
+    ["@nuxtjs/markdownit"]
   ],
   markdownit: {
     injected: true,
@@ -116,8 +119,9 @@ module.exports = {
     html: true
   },
 
-  plugins: [{
-      src: '~/plugins/components'
+  plugins: [
+    {
+      src: "~/plugins/components"
     },
     {
       src: "~plugins/vue-scrollto.js"
@@ -127,61 +131,75 @@ module.exports = {
     }
   ],
   router: {
-    middleware: 'cache'
+    middleware: "cache"
   },
   generate: {
-    routes: function (callback) {
-      const token = `hkfmsXBsZZcwty7Vk4C5kQtt`
-      const per_page = 1000
-      const version = 'published'
-      let cache_version = 0
+    routes: function(callback) {
+      const token = `hkfmsXBsZZcwty7Vk4C5kQtt`;
+      const per_page = 1000;
+      const version = "published";
+      let cache_version = 0;
 
-      let page = 1
+      let page = 1;
 
       // other routes that are not in Storyblok with their slug.
-      let routes = []
+      let routes = [];
 
       // Load space and receive latest cache version key to improve performance
-      axios.get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`).then((space_res) => {
+      axios
+        .get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`)
+        .then(space_res => {
+          // timestamp of latest publish
+          cache_version = space_res.data.space.version;
 
-        // timestamp of latest publish
-        cache_version = space_res.data.space.version
-
-        // Call first Page of the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
-        axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}&cv=${cache_version}`).then((res) => {
-          Object.keys(res.data.links).forEach((key) => {
-            if (res.data.links[key].slug != 'home') {
-              routes.push('/' + res.data.links[key].slug)
-            }
-          })
-
-          // Check if there are more pages available otherwise execute callback with current routes.
-          const total = res.headers.total
-          const maxPage = Math.ceil(total / per_page)
-          if (maxPage <= 1) {
-            callback(null, routes)
-          }
-
-          // Since we know the total we now can pregenerate all requests we need to get all Links
-          let contentRequests = []
-          for (let page = 2; page <= maxPage; page++) {
-            contentRequests.push(axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}`))
-          }
-
-          // Axios allows us to exectue all requests using axios.spread we will than generate our routes and execute the callback
-          axios.all(contentRequests).then(axios.spread((...responses) => {
-            responses.forEach((response) => {
-              Object.keys(response.data.links).forEach((key) => {
-                if (response.data.links[key].slug != 'home') {
-                  routes.push('/' + response.data.links[key].slug)
+          // Call first Page of the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
+          axios
+            .get(
+              `https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}&cv=${cache_version}`
+            )
+            .then(res => {
+              Object.keys(res.data.links).forEach(key => {
+                if (res.data.links[key].slug != "home") {
+                  routes.push("/" + res.data.links[key].slug);
                 }
-              })
-            })
+              });
 
-            callback(null, routes)
-          })).catch(callback)
-        })
-      })
+              // Check if there are more pages available otherwise execute callback with current routes.
+              const total = res.headers.total;
+              const maxPage = Math.ceil(total / per_page);
+              if (maxPage <= 1) {
+                callback(null, routes);
+              }
+
+              // Since we know the total we now can pregenerate all requests we need to get all Links
+              let contentRequests = [];
+              for (let page = 2; page <= maxPage; page++) {
+                contentRequests.push(
+                  axios.get(
+                    `https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&per_page=${per_page}&page=${page}`
+                  )
+                );
+              }
+
+              // Axios allows us to exectue all requests using axios.spread we will than generate our routes and execute the callback
+              axios
+                .all(contentRequests)
+                .then(
+                  axios.spread((...responses) => {
+                    responses.forEach(response => {
+                      Object.keys(response.data.links).forEach(key => {
+                        if (response.data.links[key].slug != "home") {
+                          routes.push("/" + response.data.links[key].slug);
+                        }
+                      });
+                    });
+
+                    callback(null, routes);
+                  })
+                )
+                .catch(callback);
+            });
+        });
     }
   }
 };
