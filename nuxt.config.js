@@ -96,7 +96,7 @@ module.exports = {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: "pre",
-          test: /\.(js|vue)$/,
+          test: /\.(js|vue|pdf)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/
         });
