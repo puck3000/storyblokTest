@@ -10,10 +10,15 @@
                         </transition>
                     </section>
                     <section id="lapLeftHead">
+                        <a href="https://www.hellastudio.ch/Stelleninserat_GraphicDesign_Digital.pdf" target="_blank" rel="noopener" class="space">
+                            <img src="@/assets/img/JOB_oval.svg" alt="Job">
+                        </a>
+                    </section>
+                    <!-- <section id="lapLeftHead">
                         <a href="https://www.instagram.com/hellastudio.ch/" target="_blank" rel="noopener" class="space">
                             <img src="@/assets/img/INSTA_oval.svg" alt="INSTAGRAM">
                         </a>
-                    </section>
+                    </section> -->
                 </li>    
                 <nuxt-link to="/" tag="li">
                     <img id="mobLogo" src="@/assets/img/HELLASTUDIO_2Z.svg" alt="Hella Studio Logo">
@@ -34,41 +39,41 @@
 </template>
 
 <script>
-import Navigation from '@/components/Navigation';
-import ScrollNav from '@/components/ScrollNav';
+import Navigation from "@/components/Navigation";
+import ScrollNav from "@/components/ScrollNav";
 
 export default {
-    components: {
-        Navigation,
-        ScrollNav
+  components: {
+    Navigation,
+    ScrollNav
+  },
+  data() {
+    return {
+      isExpanded: false,
+      isVisible: false
+    };
+  },
+  methods: {
+    toggleExpanded() {
+      this.isExpanded = !this.isExpanded;
     },
-    data(){
-        return {
-            isExpanded: false,
-            isVisible: false
-        }
-    },
-    methods: {
-        toggleExpanded() {
-            this.isExpanded = !this.isExpanded;
-        },
-        handleScroll() {
-            if (process.browser) {
-                this.isVisible = window.scrollY > 500;
-            }
-        }
-    },
-    created () {
-    if (process.browser) { 
-        window.addEventListener('scroll', this.handleScroll);
+    handleScroll() {
+      if (process.browser) {
+        this.isVisible = window.scrollY > 500;
+      }
     }
-    },
-    destroyed () {
-        if (process.browser) { 
-            window.removeEventListener('scroll', this.handleScroll);
-        }
+  },
+  created() {
+    if (process.browser) {
+      window.addEventListener("scroll", this.handleScroll);
     }
-}
+  },
+  destroyed() {
+    if (process.browser) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -187,4 +192,3 @@ export default {
 
 
 </style>
-
