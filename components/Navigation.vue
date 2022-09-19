@@ -4,6 +4,11 @@
             <li v-for="link in navLinks" :key="link.name" v-on:click="$emit('toggle')">
                 <nuxt-link tag="a" :to="link.url" >{{link.name}}</nuxt-link>
             </li>
+            <li v-on:click="$emit('toggle')">
+                <a href="https://www.hellastudio.ch/Stelleninserat_GraphicDesign_Digital.pdf" target="_blank" rel="noopener">
+                    Jobs
+                </a>
+            </li>
             
         </ul>
     </nav>
@@ -11,19 +16,17 @@
 
 <script>
 export default {
-    props: ['isExpanded'],
-    data(){
-        return {
-            navLinks: [
-                {name: 'Agentur', url: '/agentur'},
-                {name: 'Leistungen', url: '/leistungen'},
-                {name: 'Arbeiten', url: '/arbeiten'}
-            ]
-        }
-    },
-    
-    
-}
+  props: ["isExpanded"],
+  data() {
+    return {
+      navLinks: [
+        { name: "Agentur", url: "/agentur" },
+        { name: "Leistungen", url: "/leistungen" },
+        { name: "Arbeiten", url: "/arbeiten" }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
