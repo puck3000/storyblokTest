@@ -9,16 +9,18 @@
                             <img  v-else src="@/assets/img/BackButton_up.svg" alt="Back Button" key="isExpanded">
                         </transition>
                     </section>
+                    <!-- 
                     <section id="lapLeftHead">
                         <a href="https://www.hellastudio.ch/Stelleninserat_GraphicDesign_Digital.pdf" target="_blank" rel="noopener" class="space">
                             <img src="@/assets/img/JOB_oval.svg" alt="Job">
                         </a>
                     </section>
-                    <!-- <section id="lapLeftHead">
+                    -->
+                    <section id="lapLeftHead">
                         <a href="https://www.instagram.com/hellastudio.ch/" target="_blank" rel="noopener" class="space">
                             <img src="@/assets/img/INSTA_oval.svg" alt="INSTAGRAM">
                         </a>
-                    </section> -->
+                    </section> 
                 </li>    
                 <nuxt-link to="/" tag="li">
                     <img id="mobLogo" src="@/assets/img/HELLASTUDIO_2Z.svg" alt="Hella Studio Logo">
