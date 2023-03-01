@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import storyblokLivePreview from "@/mixins/storyblokLivePreview"
-import { isEditMode, resize } from '@/plugins/helper'
+import storyblokLivePreview from "@/mixins/storyblokLivePreview";
+import { isEditMode, resize } from "@/plugins/helper";
 
 export default {
   data() {
@@ -42,7 +42,8 @@ export default {
       .get("cdn/stories", {
         version: version,
         starts_with: `arbeiten/`, // needs trailing / - will have a look if we can get rid of that as well.
-        cv: context.store.state.cacheVersion
+        cv: context.store.state.cacheVersion,
+        per_page: 100
       })
       .then(res => {
         return res;
