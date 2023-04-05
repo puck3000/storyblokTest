@@ -14,7 +14,10 @@
     <div class="casepicGrid">
       <ul>
           <li v-for="pic in blok.Bilder" :key="pic.uid" :class="{ half: pic.name}">
-            <picture>
+            <!-- if .mp4 then -->
+            <video v-if="pic.filename.includes('.mp4')" :src="pic.filename" autoplay muted loop></video>
+            <!-- else -->
+            <picture v-else>
                 <source media="(max-width: 768px)" :srcset="resize(pic.filename, '768x0')">
                 <source media="(max-width: 1440px)" :srcset="resize(pic.filename, '1440x0')">
                 <source media="(min-width: 1441px)" :srcset="resize(pic.filename, '2010x0')">
@@ -28,20 +31,18 @@
 </template>
 
 <script>
-import { isEditMode, resize } from '@/plugins/helper'
+import { isEditMode, resize } from "@/plugins/helper";
 export default {
-props: [
-   'blok'
-],
-methods: {
+  props: ["blok"],
+  methods: {
     resize
   },
-    data(){
+  data() {
     return {
       bild: this.blok
-        }
-    }
-}
+    };
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -80,4 +81,6 @@ methods: {
 picture
     img 
         vertical-align: middle;
+video 
+    max-width: 100%;
 </style>
