@@ -15,7 +15,7 @@
       <ul>
           <li v-for="pic in blok.Bilder" :key="pic.uid" :class="{ half: pic.name}">
             <!-- if .mp4 then -->
-            <video v-if="pic.filename.includes('.mp4')" :src="pic.filename" autoplay muted loop></video>
+            <video v-if="pic.filename.includes('.mp4')" :src="pic.filename" autoplay muted loop playsinline ></video>
             <!-- else -->
             <picture v-else>
                 <source media="(max-width: 768px)" :srcset="resize(pic.filename, '768x0')">
