@@ -4,7 +4,7 @@
             <li v-for="link in navLinks" :key="link.name" v-on:click="$emit('toggle')">
                 <nuxt-link tag="a" :to="link.url" >{{link.name}}</nuxt-link>
             </li>
-            <li v-on:click="$emit('toggle')">
+            <li v-on:click="$emit('toggle')" class="job">
                 <a href="https://www.hellastudio.ch/Stelleninserat_AccountManagerin_1123.pdf" target="_blank" rel="noopener">
                     Jobs
                 </a>
@@ -48,6 +48,8 @@ export default {
         a 
             text-decoration: none
     +lap()
+        .job 
+            display: none
         ul
             display: grid 
             grid-template-columns: repeat(5, 1fr);
