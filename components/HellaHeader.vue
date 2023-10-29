@@ -11,7 +11,7 @@
                     </section>
                     
                     <section id="lapLeftHead">
-                        <a href="https://www.hellastudio.ch/Stelleninserat_AccountManagerin_1123" target="_blank" rel="noopener" class="space">
+                        <a href="https://www.hellastudio.ch/Stelleninserat_AccountManagerin_1123.pdf" target="_blank" rel="noopener" class="space">
                             <img src="@/assets/img/JOB_oval.svg" alt="Job">
                         </a>
                     </section>
