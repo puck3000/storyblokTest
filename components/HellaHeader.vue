@@ -21,7 +21,7 @@
             </transition>
           </section>
 
-          <section id="lapLeftHead">
+          <!-- <section id="lapLeftHead">
             <a
               href="https://www.hellastudio.ch/Stelleninserat_Praktikum_Design.pdf"
               target="_blank"
@@ -30,9 +30,9 @@
             >
               <img src="@/assets/img/JOB_oval.svg" alt="Job" />
             </a>
-          </section>
+          </section> -->
 
-          <!-- <section id="lapLeftHead">
+          <section id="lapLeftHead">
             <a
               href="https://www.instagram.com/hellastudio.ch/"
               target="_blank"
@@ -41,7 +41,7 @@
             >
               <img src="@/assets/img/INSTA_oval.svg" alt="INSTAGRAM" />
             </a>
-          </section> -->
+          </section>
         </li>
         <nuxt-link to="/" tag="li">
           <img
