@@ -8,15 +8,11 @@
       >
         <nuxt-link tag="a" :to="link.url">{{ link.name }}</nuxt-link>
       </li>
-      <!-- <li v-on:click="$emit('toggle')" class="job">
-        <a
-          href="https://www.hellastudio.ch/Stelleninserat_Praktikum_Design.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          Jobs
+      <li v-on:click="$emit('toggle')" class="job">
+        <a href="https://www.hellaland.ch/" target="_blank" rel="noopener">
+          Shop
         </a>
-      </li> -->
+      </li>
     </ul>
   </nav>
 </template>

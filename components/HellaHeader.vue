@@ -34,6 +34,17 @@
 
           <section id="lapLeftHead">
             <a
+              href="https://www.hellaland.ch/"
+              target="_blank"
+              rel="noopener"
+              class="space"
+            >
+              <img src="@/assets/img/SHOP_oval.svg" alt="Job" />
+            </a>
+          </section>
+
+          <!-- <section id="lapLeftHead">
+            <a
               href="https://www.instagram.com/hellastudio.ch/"
               target="_blank"
               rel="noopener"
@@ -41,7 +52,7 @@
             >
               <img src="@/assets/img/INSTA_oval.svg" alt="INSTAGRAM" />
             </a>
-          </section>
+          </section> -->
         </li>
         <nuxt-link to="/" tag="li">
           <img
